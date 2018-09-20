@@ -28,8 +28,28 @@ To make a copy of this project on your local machine, please clone the repositor
 git clone https://github.com/openimis/policy_renewal_service_vb
 ```
 
-You can then compile and execute the service. All configuration (database connection, 
-schedule) is donned within the Settings form found by opening the menu from the task tray. 
+You can then build the solution.
+
+To execute the service and the associated controller, the Windows Administrator 
+account is required. 
+
+To start the Windows service execute the following command:
+
+```
+InstallUtil ImisPolicyRenewal.exe
+```
+
+For the 64-bit version of the .NET Framework 4 or 4.5.*, the default path is
+C:\Windows\Microsoft.NET\Framework64\v4.0.30319\InstallUtil.exe .
+
+All configuration (database connection, schedule) is donned by using the Controller
+application, within the Settings form found by opening the menu from the task tray. 
+
+To start the Controller application execute the following command:
+
+```
+ImisPolicyRenewalController.exe
+```
 
 ## Deployment
 
